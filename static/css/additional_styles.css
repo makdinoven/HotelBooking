@@ -1,0 +1,18 @@
+#home_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Вертикальное центрирование */
+  align-items: center;    /* Горизонтальное центрирование */
+  height: 100vh;          /* Полная высота экрана */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;       /* Запрет скролла */
+  background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://www.jacadatravel.com/wp-content/uploads/2016/09/chedi-andermatt-courtyard.jpg");
+
+}
+
+
+
+.hero_title{
+  color: white;
+}

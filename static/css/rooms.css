@@ -1,0 +1,78 @@
+ body{
+   background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),
+   url("https://d1pe873sdaunfo.cloudfront.net/www.thechediandermatt.com-1165907230/cms/cache/v2/6724fb8f907f4.jpg/1920x1080/fit/80/2bba69fbe0fbdc843df0bf689719799b.webp") !important;
+ }
+.home-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding: 50px;
+     gap:25px;
+ }
+
+ h1,h2,label{
+     color:white;
+ }
+ p{
+     color: white;
+ }
+ .room-block{
+     display: flex;
+     align-items: center;
+     width: 890px;
+     height: 300px;
+     /*justify-content: space-between;*/
+     border-radius: 20px;
+     border:solid;
+     gap:10px;
+     padding: 10px;
+     background: rgba(88, 77, 77, 0.1); /* Цвет фона с прозрачностью */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+  backdrop-filter: blur(20px); /* Эффект матового стекла */
+ }
+
+ .card_image{
+     width: 290px;
+     height: 208px;
+     border-radius: 10px;
+ }
+
+ .heading{
+     display: flex;
+     align-items: center;
+ }
+
+ .form_element{
+     display: flex;
+     justify-content: space-between;
+     gap:5px;
+ }
+
+ form{
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     padding-top: 45px;
+ }
+
+ .button{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 40px;
+     border:solid;
+     border-radius: 15px;
+     border-color: white;
+     background-color: transparent;
+     color: white;
+ }
+
+ .button:hover{
+     background-color: firebrick;
+ }
+
+ .room-type{
+     width: 400px;
+ }

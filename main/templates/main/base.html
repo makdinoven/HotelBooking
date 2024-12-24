@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Отель Комфорт{% endblock %}</title>
+
+    <!-- Подключение Bootstrap и Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Подключение пользовательских стилей -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/additional_styles.css' %}">
+
+    {% block extra_styles %}{% endblock %}
+
+    <!-- Добавление favicon -->
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+</head>
+    <!-- Шапка сайта -->
+    <header class="header py-3 border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Логотип -->
+                <div class="col-md-2 text-center text-md-start">
+                    <a href="/" class="d-inline-block">
+                        <img src="{% static 'images/logo.png' %}" alt="Логотип" class="logo img-fluid">
+                    </a>
+                </div>
+                <!-- Название отеля -->
+                <div class="col-md-2 text-center text-md-end">
+                    <h1 class="m-0" style="font-size: 24px; font-weight: normal;">Отель Комфорт</h1>
+                </div>
+                <!-- Адрес -->
+                <div class="col-md-2 text-center">
+                    <p class="mb-1">
+                        <i class="fas fa-map-marker-alt"></i> Минск, улица Кирова, 18
+                    </p>
+                    <p class="mb-1">
+                        <i class="fas fa-envelope"></i> <a href="mailto:info@president-hotel.by">info@president-hotel.by</a>
+                    </p>
+                </div>
+                <!-- Телефоны -->
+                <div class="col-md-2 text-center">
+                    <p class="mb-1">
+                        <i class="fas fa-phone-alt"></i> <a href="tel:+375172297000">+375 (17) 229-70-00</a> |
+                        <i class="fas fa-mobile-alt"></i> <a href="tel:+375447747701">+375 (44) 774-77-01</a>
+                    </p>
+                </div>
+                <!-- Соцсети -->
+                <div class="col-md-2 text-center">
+                    <p class="mb-1">Ресепшен работает круглосуточно</p>
+                    <p class="mb-1">
+                        <a href="https://t.me/milamiz" target="_blank" class="me-2">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://wa.me/375447747701" target="_blank" class="me-2">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="viber://chat?number=+375447747701" target="_blank">
+                            <i class="fab fa-viber"></i>
+                        </a>
+                    </p>
+                </div>
+                <!-- Спа-центр -->
+                <div class="col-md-2 text-center">
+                    <p class="mb-1">Спа-центр:</p>
+                    <p><a href="tel:+375291731074">+375 (29) 173-10-74</a></p>
+                </div>
+            </div>
+
+            <!-- Навигация -->
+            <div class="row mt-3">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav mx-auto">
+                                <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Главная</a></li>
+                                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">О нас</a></li>
+                                <li class="nav-item"><a href="{% url 'room_list' %}" class="nav-link">Номера</a></li>
+                                <li class="nav-item"><a href="{% url 'info' %}" class="nav-link">Категории</a></li>
+                                </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer py-3 border-top">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Название отеля -->
+            <div class="col-md-2 text-center text-md-end">
+                <h1 class="m-0" style="font-size: 24px; font-weight: normal;">Отель Комфорт</h1>
+            </div>
+            <!-- Адрес -->
+            <div class="col-md-2 text-center">
+                <p class="mb-1">
+                    <i class="fas fa-map-marker-alt"></i> Минск, улица Кирова, 18
+                </p>
+                <p class="mb-1">
+                    <i class="fas fa-envelope"></i> <a href="mailto:info@otelkomfort.by">info@otelkomfort.by</a>
+                </p>
+            </div>
+            <!-- Телефоны -->
+            <div class="col-md-2 text-center">
+                <p class="mb-1">
+                    <i class="fas fa-phone-alt"></i> <a href="tel:+375172297000">+375 (17) 229-70-00</a> |
+                    <i class="fas fa-mobile-alt"></i> <a href="tel:+375447747701">+375 (44) 774-77-01</a>
+                </p>
+            </div>
+            <!-- Социальные сети -->
+            <div class="col-md-2 text-center">
+                <p class="mb-1">Ресепшен работает круглосуточно</p>
+                <p class="mb-1">
+                    <a href="https://t.me/milamiz" target="_blank" class="me-2">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/375447747701" target="_blank" class="me-2">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="viber://chat?number=+375447747701" target="_blank">
+                        <i class="fab fa-viber"></i>
+                    </a>
+                </p>
+            </div>
+            <!-- Спа-центр -->
+            <div class="col-md-2 text-center">
+                <p class="mb-1">Спа-центр:</p>
+                <p><a href="tel:+375291731074">+375 (29) 173-10-74</a></p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p>&copy; 2024 Отель Комфорт. Все права защищены.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

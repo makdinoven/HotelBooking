@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Error</h1>
+    <p>{{ error_message }}</p>
+    <a href="javascript:history.back()">Вернуться назад</a></div>
+{% endblock %}
+
+

@@ -1,0 +1,19 @@
+ body{
+   background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),
+   url("https://d1pe873sdaunfo.cloudfront.net/www.thechediandermatt.com-1165907230/cms/cache/v2/6724fb8f907f4.jpg/1920x1080/fit/80/2bba69fbe0fbdc843df0bf689719799b.webp") !important;
+ }
+.home-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     height: 600px;
+     gap:25px;
+ }
+
+ h1{
+     color:white;
+ }
+ p{
+     color: white;
+ }

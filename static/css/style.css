@@ -1,0 +1,389 @@
+/* Основной стиль для хедера */
+.header h1 {
+    margin-left: 0;  /* Убрать отступ слева для заголовка */
+}
+
+.header {
+     background: rgba(255, 255, 255, 0.1); /* Цвет фона с прозрачностью */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+  backdrop-filter: blur(20px); /* Эффект матового стекла */
+    color:white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header .logo {
+    max-height: 70px;
+    margin-right: 10px;
+}
+
+.header p, .header a {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.header a:hover {
+    color: firebrick;  /* Бордовый цвет при наведении */
+}
+
+.header .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: firebrick;  /* Бордовый цвет при наведении */
+}
+
+.header .fab {
+    font-size: 18px;
+    color: white;
+}
+
+.header .fab:hover {
+    color: firebrick;  /* Бордовый цвет при наведении */
+}
+/* Стили для кнопки "Подробнее" */
+.btn-link {
+    color: inherit !important; /* Наследует цвет текста родителя, с приоритетом */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    padding: 10px 20px; /* Увеличиваем размеры кнопки */
+    font-size: 18px; /* Увеличиваем размер текста */
+    border: 2px solid firebrick; /* Бордовый контур */
+    border-radius: 5px; /* Скругление углов */
+    background-color: transparent !important; /* Прозрачный фон */
+    display: inline-block; /* Чтобы кнопка не расползалась */
+    margin-top: 15px; /* Отступ сверху, чтобы кнопка была на новой строке */
+}
+
+.btn-link:hover {
+    background-color: firebrick !important; /* Бордовый фон при наведении */
+    color: #fff !important; /* Белый текст при наведении */
+    text-decoration: none !important; /* Убираем подчеркивание при наведении */
+}
+
+.btn-link:focus, .btn-link:active {
+    outline: none !important; /* Убираем синий контур при фокусе и активном состоянии */
+    box-shadow: none !important; /* Убираем тень, если она появляется */
+}
+
+/* Изменение размера изображений в карусели */
+#hotelCarousel .carousel-item img {
+    max-width: 100%; /* Убедимся, что изображения не выходят за пределы контейнера */
+    height: auto; /* Сохраняем пропорции изображений */
+    object-fit: cover; /* Изображения заполняют область без искажения пропорций */
+}
+
+/* Опционально: Устанавливаем максимальную высоту изображений */
+#hotelCarousel .carousel-item img {
+    max-height: 500px; /* Максимальная высота изображения */
+    object-fit: cover; /* Изображение заполняет пространство, сохраняя пропорции */
+}
+
+/* Фон для текста в карусели */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    padding: 20px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Скругление углов фона */
+    color: #fff; /* Белый текст для контраста */
+}
+
+/* Дополнительно: Выравнивание текста по центру */
+.carousel-caption h5, .carousel-caption p {
+    text-align: center;
+}
+
+/* Устанавливаем box-sizing для всех элементов */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Стили для секции о нас */
+.about-section {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;  /* Центрируем контент */
+    width: 100%;  /* Убедитесь, что секция занимает всю ширину */
+}
+/* Ограничиваем ширину текста в секции "О нас" */
+.about-section .about-text {
+    max-width: 950px; /* Ограничиваем максимальную ширину текста */
+    margin: 0 auto;   /* Центрируем текст */
+    line-height: 1.6;  /* Улучшаем читаемость */
+    color: white; /* Цвет текста */
+    font-size: 18px; /* Размер шрифта */
+}
+
+
+/* Стиль для изображения */
+.hotel-image {
+    width: 100%;  /* Картинка на всю ширину экрана */
+    max-width: 65%;  /* Убедитесь, что ширина не превышает 100% */
+    height: auto;  /* Сохраняем пропорции */
+    max-height: 1000px;  /* Ограничиваем высоту */
+    object-fit: cover;
+     margin: 0 auto; /* Изображение будет масштабироваться без искажения */
+    margin-bottom: 30px;  /* Отступ снизу */
+    display: block; /* Убираем возможные отступы снизу от картинки */
+}
+
+/* Стили для секции услуг */
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.services-section h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.services-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Основные стили для секции услуг */
+.services-section {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.services-section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.services-section p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* Стили для элементов услуги */
+.service-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0; /* Начальная прозрачность */
+  animation: fadeInUp 1s forwards; /* Добавляем анимацию */
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.service-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.service-img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px; /* Скругление углов для изображения */
+}
+
+.service-text {
+  width: 50%;
+  padding: 20px;
+}
+
+.service-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-link {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: firebrick; /* Бордовый фон */
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-link:hover {
+  background-color: #600000; /* Темно-бордовый фон при наведении */
+}
+
+/* Стили для футера */
+footer {
+    background: rgba(255, 255, 255, 0.1); /* Цвет фона с прозрачностью */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+  backdrop-filter: blur(20px); /* Эффект матового стекла */
+    color: white;  /* Темно-серый текст */
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .nav-link {
+    color: white !important;  /* Серые ссылки в футере */
+    font-size: 16px;
+}
+
+footer .nav-link:hover {
+    color: white !important;  /* Темно-серый цвет при наведении */
+}
+
+footer .fab {
+    font-size: 18px;
+    color: white;
+}
+
+footer .fab:hover {
+    color: white;  /* Темно-серый цвет при наведении */
+}
+/* Основной стиль для футера */
+footer {
+    border-top: 1px solid #ddd; /* Легкая граница сверху */
+    padding: 20px 0;  /* Отступы для футера */
+}
+
+/* Стили для ссылок в футере */
+footer .nav-link {
+    color: white;  /* Темный цвет текста для ссылок */
+    font-size: 14px;
+    margin-right: 15px;  /* Отступы между ссылками */
+}
+
+footer .nav-link:hover {
+    color: #b22222;  /* Бордовый цвет при наведении */
+}
+
+/* Стили для иконок в футере */
+footer .fab {
+    font-size: 18px;
+    color: white;
+}
+
+footer .fab:hover {
+    color: #b22222;  /* Бордовый цвет иконок при наведении */
+}
+
+/* Стили для списка ссылок в футере */
+footer .navbar-nav {
+    display: flex;
+    justify-content: center;  /* Центрирование элементов */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .navbar-nav .nav-item {
+    margin: 0 10px;  /* Отступы между элементами */
+}
+
+footer .navbar-nav .nav-item .nav-link {
+    text-decoration: none;  /* Убираем подчеркивание */
+}
+
+/* Стили для секции "Достопримечательности" */
+.attractions-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.attractions-section h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Стили для элемента достопримечательности */
+.attraction-item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Стили для изображения достопримечательности */
+.attraction-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.attraction-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Стили для текста и кнопки */
+.attraction-text {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.attraction-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.attraction-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #b22222;
+    text-decoration: none;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn-link:hover {
+    background-color: #a81e1e;
+}
+
+.ploshchad-pobedy-section .image-container img {
+    width: 75%; /* Картинка занимает 75% ширины контейнера */
+    display: block;
+    margin: 0 auto; /* Центрирование изображения */
+}
+
+.ploshchad-pobedy-section .text-container {
+    width: 50%; /* Текст занимает 65% ширины контейнера */
+    margin: 20px auto; /* Центрирование текста */
+    text-align: left; /* Выравнивание текста по левому краю */
+    line-height: 1.6; /* Улучшение читаемости текста */
+}

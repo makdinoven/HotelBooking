@@ -1,0 +1,65 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+        <h1 class="text-center mb-4">Наши Услуги для Вашего Комфорта</h1>
+    <p class="text-center mb-5">
+      В «Отеле Комфорт» мы предлагаем широкий спектр услуг, которые обеспечат вам максимальный комфорт и удобство во время пребывания. Наши услуги предназначены для того, чтобы ваш отдых был незабываемым и беззаботным.
+    </p>
+
+    <!-- Трансфер -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <img src="{% static 'images/transfer1.jpg' %}" alt="Трансфер" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <h3>Трансфер</h3>
+        <p>Удобный и безопасный трансфер до аэропорта и других мест назначения.</p>
+      </div>
+    </div>
+
+    <!-- Парковка -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <img src="{% static 'images/parking1.jpg' %}" alt="Парковка" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <h3>Парковка</h3>
+        <p>Надежная парковка для ваших автомобилей на территории отеля.</p>
+      </div>
+    </div>
+
+    <!-- Прачечная -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <img src="{% static 'images/laundry1.jpg' %}" alt="Прачечная" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <h3>Прачечная</h3>
+        <p>Профессиональные услуги по стирке и глажке для вашего удобства.</p>
+      </div>
+    </div>
+
+    <!-- Консьерж -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <img src="{% static 'images/concierge1.jpg' %}" alt="Консьерж" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <h3>Консьерж</h3>
+        <p>Наши консьержи всегда готовы помочь вам с любыми вопросами.</p>
+      </div>
+    </div>
+
+
+</div>
+{% endblock %}
+
+

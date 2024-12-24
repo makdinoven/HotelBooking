@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+{% block content %}
+  <div class="attractions-section">
+    <div class="container">
+      <h1 class="text-center mb-4">Достопримечательности</h1>
+
+      <!-- Достопримечательность 1: Минская ратуша -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <img src="{% static 'images/minsk-ratusha.jpg' %}" alt="Минская ратуша" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h3>Минская ратуша</h3>
+          <p>Минская ратуша — историческое здание в центре Минска, которое служило символом города. Построена в 1797 году, сегодня ратуша является культурным и историческим памятником.</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Адрес:</strong> пл. Свободы 2а, Минск, Беларусь</p>
+          <p><i class="fas fa-clock"></i> <strong>Время работы:</strong> с 11:00 до 19:00</p>
+          <p><strong>Расстояние:</strong> 1,1 км</p>
+          <p><strong>Время в пути от «Отеля-Комфорт»:</strong> 15 мин</p>
+        </div>
+      </div>
+
+      <!-- Достопримечательность 2: Остров слез -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <img src="{% static 'images/ostrov-slez.jpg' %}" alt="Остров слез" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h3>Остров слез</h3>
+          <p>Мемориал, посвящённый белорусским воинам-интернационалистам, павшим в Афганистане в 1979-1989 гг. Остров слёз в Минске возвышается более чем на три метра над окружающим ландшафтом, поверхность острова неровная, с множеством камней. Всё это символизирует афганские горы.</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Адрес:</strong> ул. Старовиленская 16, Минск, Беларусь</p>
+          <p><strong>Расстояние:</strong> 2,1 км</p>
+          <p><strong>Время в пути от «Отеля-Комфорт»:</strong> 18 мин</p>
+        </div>
+      </div>
+
+      <!-- Достопримечательность 3: Площадь Победы -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <img src="{% static 'images/ploshchad-pobedy.jpg' %}" alt="Площадь Победы" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+          <h3>Площадь Победы</h3>
+          <p>Площадь Победы — памятное место в честь подвига народа в годы Великой Отечественной войны. На площади расположен монумент Победы с вечным огнём, который был зажжён в 1961 году.</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Адрес:</strong> Площадь Победы, Минск, Беларусь</p>
+          <p><strong>Расстояние:</strong> 1,4 км</p>
+          <p><strong>Время в пути от «Отеля-Комфорт»:</strong> 16 мин</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

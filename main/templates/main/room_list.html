@@ -1,0 +1,68 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Номера{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/rooms.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    {% for room in room_types %}
+    <div class="room-block">
+        <div class="col_one">
+            <h2>{{ room.name }}</h2>
+            <img class="card_image" src="{{ room.image }}" alt="Image of {{ room.name }}">
+        </div>
+        <form action="{% url 'booking-view' %}" method="post">
+            {% csrf_token %}
+            <!-- Тип номера: скрытое поле -->
+            <input type="hidden" name="room_type" value="{{ room.type }}">
+            <div class="col_two">
+                <!-- Имя -->
+                <div class="form_element">
+                    <label for="first_name">Имя:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <br>
+                <!-- Фамилия -->
+                <div class="form_element">
+                    <label for="last_name">Фамилия:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <br>
+                <!-- Email -->
+                <div class="form_element">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+                <!-- Телефон -->
+                <div class="form_element">
+                    <label for="phone">Телефон:</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <br>
+            </div>
+            <div class="col_three">
+                <!-- Дата заезда -->
+                <div class="form_element">
+                    <label for="check_in_date">Дата заселения:</label>
+                    <input type="date" id="check_in_date" name="check_in_date" required>
+                </div>
+                <br>
+                <!-- Дата выезда -->
+                <div class="form_element">
+                    <label for="check_out_date">Дата выселения:</label>
+                    <input type="date" id="check_out_date" name="check_out_date" required>
+                </div>
+                <br>
+                <!-- Кнопка отправки -->
+                <button class="button" type="submit">Забронировать</button>
+            </div>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

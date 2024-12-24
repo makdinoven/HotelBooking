@@ -1,0 +1,37 @@
+ body{
+   background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),
+   url("https://d1pe873sdaunfo.cloudfront.net/www.thechediandermatt.com-1165907230/cms/cache/v2/6724f74c24679.jpg/1920x1080/fit;c:0,0,1920,1079/80/dff9f8effca379906f9d8c6f8675024c.webp") !important;
+ }
+.home-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     height: 600px;
+     gap:25px;
+ }
+.about-text{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+ h1,h2{
+     color:white;
+ }
+ p{
+
+     color: white;
+ }
+
+ .room-types-container{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .room-type{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }

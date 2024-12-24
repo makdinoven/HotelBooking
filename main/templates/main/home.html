@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Добро пожаловать в Отель Комфорт</h1>
+    <a class="home_button" href="{% url 'room_list' %}">Посмотреть доступные номера</a>
+</div>
+{% endblock %}
